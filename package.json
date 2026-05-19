@@ -1,0 +1,42 @@
+{
+  "name": "moto-pro-gps-tracker",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Premium motosiklet GPS telemetri tracker - DJI Action için FIT dosya oluşturucu",
+  "author": "Your Name",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf node_modules dist",
+    "reinstall": "npm run clean && npm install",
+    "type-check": "tsc --noEmit",
+    "android:init": "npm run build && npx cap add android",
+    "android:sync": "npm run build && npx cap sync android",
+    "android:open": "npx cap open android",
+    "android:build": "npm run build && npx cap sync android && cd android && ./gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.3.4",
+    "@capacitor/cli": "^7.6.5",
+    "@capacitor/core": "^8.3.4",
+    "@markw65/fit-file-writer": "^0.1.9",
+    "clsx": "2.1.1",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "tailwind-merge": "3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.17",
+    "@types/node": "22.19.17",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.1.1",
+    "tailwindcss": "4.1.17",
+    "typescript": "5.9.3",
+    "vite": "7.3.2",
+    "vite-plugin-singlefile": "2.3.0"
+  }
+}
