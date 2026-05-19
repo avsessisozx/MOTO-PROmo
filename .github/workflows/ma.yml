@@ -1,6 +1,0 @@
-npm install
-npm run build
-npx cap add android
-git add android/
-git commit -m "Add Android platform"
-git push
