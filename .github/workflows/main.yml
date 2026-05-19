@@ -1,0 +1,2 @@
+git remote add origin https://github.com/USERNAME/moto-pro-gps-tracker.git
+git push -u origin main
